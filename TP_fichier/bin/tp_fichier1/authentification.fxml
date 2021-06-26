@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="546.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="exercice4Controller">
+  <columnConstraints>
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="140.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="429.0" minWidth="10.0" prefWidth="373.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="411.0" minWidth="10.0" prefWidth="75.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label prefHeight="50.0" prefWidth="257.0" text="-----Authentification-----------" GridPane.columnIndex="1" />
+      <Label prefHeight="31.0" prefWidth="98.0" text="Login" GridPane.rowIndex="1" />
+      <Label prefHeight="34.0" prefWidth="92.0" text="Password" GridPane.rowIndex="2" />
+      <TextField fx:id="LoginTF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button fx:id="authButton" mnemonicParsing="false" onAction="#verificaionLogPasss" prefHeight="33.0" prefWidth="296.0" text="Authentification" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <PasswordField fx:id="passwordTF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Text fx:id="actionTarget" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="213.13671875" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   </children>
+</GridPane>

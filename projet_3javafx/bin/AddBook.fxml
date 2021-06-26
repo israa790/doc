@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Tp4_javaFx.AddBookController">
+   <bottom>
+      <AnchorPane prefHeight="618.0" prefWidth="542.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table" layoutX="1.0" layoutY="195.0" prefHeight="253.0" prefWidth="548.0">
+              <columns>
+                <TableColumn fx:id="prenomCol" prefWidth="181.0" text="Prenom" />
+                <TableColumn fx:id="nomCol" prefWidth="184.0" text="Nom" />
+                  <TableColumn fx:id="emailCol" minWidth="0.0" prefWidth="182.0" text="Adresse Email" />
+              </columns>
+            </TableView>
+            <Button fx:id="addBtn" layoutX="221.0" layoutY="162.0" mnemonicParsing="false" onAction="#addPerson" text="Ajouter a la table" />
+            <HBox layoutX="114.0" layoutY="492.0" prefHeight="70.0" prefWidth="315.0" spacing="20.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Button fx:id="removeBtn" mnemonicParsing="false" onAction="#deletePerson" prefHeight="24.0" prefWidth="70.0" text="supprimer" />
+                  <Button fx:id="importBtn" mnemonicParsing="false" onAction="#importPerson" text="importer" />
+                  <Button fx:id="exportBtn" mnemonicParsing="false" onAction="#exportPerson" text="exporter" />
+                  <Button fx:id="quitBtn" mnemonicParsing="false" onAction="#quitter" text="quitter" />
+               </children>
+               <padding>
+                  <Insets right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <GridPane layoutY="2.0" prefHeight="160.0" prefWidth="548.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.0" minWidth="10.0" prefWidth="161.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="387.0" minWidth="10.0" prefWidth="387.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Prenom" GridPane.halignment="CENTER" />
+                  <TextField fx:id="textFieldPrenom" prefHeight="25.0" prefWidth="321.0" GridPane.columnIndex="1" />
+                  <Label text="Nom" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField fx:id="textFieldNom" prefHeight="25.0" prefWidth="321.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="textFieldMail" prefHeight="25.0" prefWidth="322.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Adresse Email" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
